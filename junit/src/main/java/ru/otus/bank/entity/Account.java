@@ -1,57 +1,21 @@
 package ru.otus.bank.entity;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@EqualsAndHashCode
+@Getter
+@Setter
 public class Account {
 
-    private long id;
+    private Long id;
     private BigDecimal amount;
-
     private Integer type;
-
     private String number;
-
     private Long agreementId;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public Long getAgreementId() {
-        return agreementId;
-    }
-
-    public void setAgreementId(Long agreementId) {
-        this.agreementId = agreementId;
-    }
 
     @Override
     public String toString() {
