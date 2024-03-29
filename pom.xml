@@ -16,7 +16,7 @@
     </properties>
 
     <modules>
-        <module>junit</module>
+        <module>lesson04-intermediate-test</module>
     </modules>
 
     <dependencyManagement>

@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>otus-homework-jdp</groupId>
-    <artifactId>junit</artifactId>
+    <artifactId>lesson04-intermediate-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
