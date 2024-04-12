@@ -17,6 +17,7 @@
 
     <modules>
         <module>lesson04-intermediate-test</module>
+        <module>lesson06-reflection-api</module>
     </modules>
 
     <dependencyManagement>
