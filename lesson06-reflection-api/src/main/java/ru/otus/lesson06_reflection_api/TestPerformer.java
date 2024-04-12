@@ -20,8 +20,8 @@ public class TestPerformer {
         logger.info("performTests started");
 
         Method[] methods = clazz.getDeclaredMethods();
-        if (!isBeforeAfterUsedOnce(methods))
-            return;
+
+        checkBeforeAfterUsedOnce(methods);
 
         Object invoker = clazz.getConstructor().newInstance();
 
@@ -80,7 +80,7 @@ public class TestPerformer {
         return null;
     }
 
-    private Boolean isBeforeAfterUsedOnce(Method[] methods) {
+    private void checkBeforeAfterUsedOnce(Method[] methods) {
         int afterAnnotationCounter = 0;
         int beforeAnnotationCounter = 0;
 
@@ -92,15 +92,9 @@ public class TestPerformer {
         }
 
         if (beforeAnnotationCounter > 1) {
-            System.out.println("it is prohibited to set BeforeSuite annotation more than once in class");
-            return false;
+            throw new IllegalStateException("it is prohibited to set BeforeSuite annotation more than once in class");
         } else if (afterAnnotationCounter > 1) {
-            System.out.println("it is prohibited to set AfterSuite annotation more than once in class");
-            return false;
-        } else {
-            return true;
+            throw new IllegalStateException("it is prohibited to set AfterSuite annotation more than once in class");
         }
-
-
-    }    
+    }
 }
