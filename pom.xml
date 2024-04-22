@@ -18,6 +18,7 @@
     <modules>
         <module>lesson04-intermediate-test</module>
         <module>lesson06-reflection-api</module>
+        <module>lesson08-stream-api</module>
     </modules>
 
     <dependencyManagement>
