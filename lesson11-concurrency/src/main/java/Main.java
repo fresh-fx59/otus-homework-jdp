@@ -1,4 +1,6 @@
-import pool.CustomPool;
+import ru.otus.lesson11_concurrency.pool.CustomPool;
+
+import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +15,10 @@ public class Main {
     }
 
     static class Task implements Runnable {
+        private static final Logger logger = Logger.getLogger(Task.class.getName());
+
         public void run() {
-            System.out.println("Task running in thread: " + Thread.currentThread().getName());
+            logger.info("Task running in thread: " + Thread.currentThread().getName());
         }
     }
 }

@@ -1,4 +1,4 @@
-package pool;
+package ru.otus.lesson11_concurrency.pool;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -36,6 +36,7 @@ public class CustomPool {
     }
 
     private class WorkerThread extends Thread {
+        @Override
         public void run() {
             Runnable task;
 

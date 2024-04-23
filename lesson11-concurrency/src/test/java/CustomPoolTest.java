@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test;
-import pool.CustomPool;
+import ru.otus.lesson11_concurrency.pool.CustomPool;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class CustomPoolTest {
+class CustomPoolTest {
 
     @Test
     void IllegalStateExceptionTest() {
